@@ -26,7 +26,25 @@ Check if the complement already exists in the HashMap.
 - If it exists, return the index stored in the map along with the current index.
 - Otherwise, store the current element and its index in the HashMap and continue.
 
+If the loop finishes without finding a valid pair, return an empty array.Create a HashMap to store each number along with its index.
+
+Iterate through the array once. For every element, calculate its complement using:
+
+complement = target - nums[i]
+
+Check if the complement already exists in the HashMap.
+
+- If it exists, return the index stored in the map along with the current index.
+- Otherwise, store the current element and its index in the HashMap and continue.
+
 If the loop finishes without finding a valid pair, return an empty array.
 
 ## LeetCode
 https://leetcode.com/problems/two-sum/
+
+## What I Learned
+
+- A HashMap allows constant-time lookups, reducing the time complexity from O(n²) to O(n).
+- Store each element and its index while traversing the array only once.
+- Before storing the current element, check whether its complement already exists in the HashMap.
+- HashMap is one of the most common techniques for solving array lookup problems efficiently.
