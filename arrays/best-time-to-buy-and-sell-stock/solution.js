@@ -1,4 +1,6 @@
 // Best Time to Buy and Sell Stock
+
+// Brute Force
 var bruteMaxProfit = function(prices) {
     let profit = 0;
     let maxProfit = 0;
@@ -15,6 +17,7 @@ var bruteMaxProfit = function(prices) {
 var res = bruteMaxProfit([7, 6, 4, 3, 1]);
 console.log(res);
 
+// Optimal
 var maxProfit = function (prices) {
     let minPrice = prices[0];
     let maxProfit = 0;
