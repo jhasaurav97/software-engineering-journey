@@ -73,12 +73,12 @@ See `solution.js`
 
 ---
 
-## LeetCode
-
-https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
-
 ## What I Learned
 
 - Greedy algorithms do not always require sorting.
 - Tracking the minimum value seen so far is enough to compute the maximum profit.
 - Brute force checks every possible pair, while the optimal solution solves the problem in a single traversal.
+
+## LeetCode
+
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock/

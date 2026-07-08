@@ -6,30 +6,60 @@ Hash Map
 ## Difficulty
 Easy
 
-## Brute Force
-Time: O(n²)
-Space: O(1)
+## Brute Force Approach
 
-## Optimal
-Time: O(n)
-Space: O(n)
+Use two nested loops to check every possible pair of elements in the array.
 
-## Approach
-Create a HashMap to store each number along with its index.
+For each pair, calculate their sum.
 
-Iterate through the array once. For every element, calculate its complement using:
+If the sum equals the target, return their indices.
 
-complement = target - nums[i]
+If no valid sum pair is found after traversing the array, return an empty array.
 
-Check if the complement already exists in the HashMap.
+### Time Complexity
 
-- If it exists, return the index stored in the map along with the current index.
-- Otherwise, store the current element and its index in the HashMap and continue.
+O(n²)
 
-If the loop finishes without finding a valid pair, return an empty array.Create a HashMap to store each number along with its index.
+### Space Complexity
 
-## LeetCode
-https://leetcode.com/problems/two-sum/
+O(1)
+
+## Optimal Approach
+
+Create a HashMap to store each element along with its index.
+
+Traverse the array once.
+
+For every element, calculate its complement using:
+
+```js
+complement = target - arr[i];
+```
+
+Check whether the complement already exists in the HashMap.
+
+- If it exists, return the stored index of the complement along with the current index.
+- Otherwise, store the current element and its index in the HashMap.
+
+If no valid pair is found after traversing the array, return an empty array.
+
+### Why does this work?
+
+The complement of the current element is the only value needed to reach the target. By storing previously visited elements in a HashMap, we can find the complement in constant time, reducing the overall time complexity to O(n).
+
+### Time Complexity
+
+O(n)
+
+### Space Complexity
+
+O(n)
+
+## JavaScript
+
+See `solution.js`
+
+---
 
 ## What I Learned
 
@@ -37,3 +67,6 @@ https://leetcode.com/problems/two-sum/
 - Store each element and its index while traversing the array only once.
 - Before storing the current element, check whether its complement already exists in the HashMap.
 - HashMap is one of the most common techniques for solving array lookup problems efficiently.
+
+## LeetCode
+https://leetcode.com/problems/two-sum/
